@@ -13,12 +13,12 @@ vim.opt.backspace = "indent"
 vim.opt.whichwrap = "b,s"
 vim.opt.timeoutlen = 300
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldnestmax = 2
-vim.opt.foldlevel = 0
-vim.opt.foldminlines = 100
-vim.opt.foldopen = "block,hor,mark,percent,quickfix,search,tag,undo"
+-- vim.opt.foldmethod = "expr"
+-- vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+-- vim.opt.foldnestmax = 2
+-- vim.opt.foldlevel = 0
+-- vim.opt.foldminlines = 100
+-- vim.opt.foldopen = "block,hor,mark,percent,quickfix,search,tag,undo"
 
 -- general
 lvim.log.level = "info"
