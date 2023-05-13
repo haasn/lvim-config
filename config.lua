@@ -46,6 +46,8 @@ lvim.keys.normal_mode["<M-l>"] = "<C-w>l"
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
+lvim.keys.visual_mode["ga"] = "<Plug>(EasyAlign)"
+
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["s"] = { "<cmd>wa<cr>", "Save all" }
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
@@ -127,6 +129,7 @@ lvim.plugins = {
     "mrjones2014/nvim-ts-rainbow",
     "p00f/clangd_extensions.nvim",
     "mbbill/undotree",
+    "junegunn/vim-easy-align",
 
     -- {
     --     "folke/trouble.nvim",
