@@ -182,6 +182,17 @@ lvim.plugins = {
 }
 
 -- GitHub Copilot
+-- table.insert(lvim.plugins, {
+--     "zbirenbaum/copilot.lua",
+--     cmd = "Copilot",
+--     event = "InsertEnter",
+--     config = function()
+--         vim.defer_fn(function()
+--             require("copilot").setup({})
+--         end, 100)
+--     end,
+-- })
+
 table.insert(lvim.plugins, {
     "zbirenbaum/copilot-cmp",
     event = "InsertEnter",
