@@ -130,6 +130,7 @@ lvim.plugins = {
     "p00f/clangd_extensions.nvim",
     "mbbill/undotree",
     "junegunn/vim-easy-align",
+    "lukoshkin/trailing-whitespace",
 
     -- {
     --     "folke/trouble.nvim",
