@@ -65,6 +65,7 @@ lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.highlight.enable = true
 lvim.builtin.treesitter.rainbow.enable = false
+lvim.builtin.autopairs.active = false
 
 lvim.builtin.telescope.pickers = {
     find_files = {
