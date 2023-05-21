@@ -178,18 +178,19 @@ lvim.plugins = {
     --         require("leap").add_default_mappings()
     --     end,
     -- },
-
-    {
-        'wfxr/minimap.vim',
-        build = "cargo install --locked code-minimap",
-        cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
-        config = function()
-            vim.g.minimap_width = 10
-            vim.g.minimap_auto_start = 1
-            vim.g.minimap_auto_start_win_enter = 1
-        end,
-    },
 }
+
+-- Minimap
+table.insert(lvim.plugins, {
+    'wfxr/minimap.vim',
+    build = "cargo install --locked code-minimap",
+    cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
+    config = function()
+        vim.g.minimap_width = 10
+        vim.g.minimap_auto_start = true
+        vim.g.minimap_auto_start_win_enter = true
+    end
+})
 
 -- GitHub Copilot
 -- table.insert(lvim.plugins, {
