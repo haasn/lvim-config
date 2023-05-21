@@ -130,8 +130,16 @@ lvim.plugins = {
     "mrjones2014/nvim-ts-rainbow",
     "p00f/clangd_extensions.nvim",
     "mbbill/undotree",
-    "junegunn/vim-easy-align",
     "lukoshkin/trailing-whitespace",
+
+    {
+        "junegunn/vim-easy-align",
+        config = function()
+            vim.cmd [[
+                let g:easy_align_delimiters = { '\': { 'pattern': '\\$' }}
+            ]]
+        end,
+    },
 
     -- {
     --     "folke/trouble.nvim",
@@ -176,9 +184,9 @@ lvim.plugins = {
         build = "cargo install --locked code-minimap",
         cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
         config = function()
-            vim.cmd("let g:minimap_width = 10")
-            vim.cmd("let g:minimap_auto_start = 1")
-            vim.cmd("let g:minimap_auto_start_win_enter = 1")
+            vim.g.minimap_width = 10
+            vim.g.minimap_auto_start = 1
+            vim.g.minimap_auto_start_win_enter = 1
         end,
     },
 }
