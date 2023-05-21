@@ -74,10 +74,18 @@ lvim.builtin.telescope.pickers = {
             height = 0.9,
         }
     },
+    diagnostics = {
+        layout_config = {
+            width = 0.9,
+            height = 0.9,
+        }
+    }
 }
 
 -- generic LSP settings <https://www.lunarvim.org/docs/languages#lsp-support>
-lvim.lsp.diagnostics.virtual_text = true
+vim.diagnostic.config({
+    virtual_text = true,
+})
 
 -- always installed on startup, useful for parsers without a strict filetype
 lvim.builtin.treesitter.ensure_installed = { "comment", "markdown_inline", "regex" }
