@@ -192,8 +192,8 @@ lvim.plugins = {
 table.insert(lvim.plugins, {
     'wfxr/minimap.vim',
     build = "cargo install --locked code-minimap",
-    cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
-    config = function()
+    -- cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
+    init = function()
         vim.g.minimap_width = 10
         vim.g.minimap_auto_start = true
         vim.g.minimap_auto_start_win_enter = true
