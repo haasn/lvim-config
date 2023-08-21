@@ -13,9 +13,9 @@ vim.opt.backspace = "indent"
 vim.opt.whichwrap = "b,s"
 vim.opt.timeoutlen = 300
 
-vim.opt.foldmethod = "expr"
+vim.opt.foldmethod = "indent"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
-vim.opt.foldnestmax = 2
+vim.opt.foldnestmax = 1
 vim.opt.foldlevel = 0
 vim.opt.foldminlines = 100
 vim.opt.foldopen = "block,hor,mark,percent,quickfix,search,tag,undo"
@@ -58,7 +58,7 @@ lvim.builtin.which_key.mappings["u"] = { "<cmd>UndotreeToggle<CR>", "Undo Tree" 
 -- Change theme settings
 lvim.colorscheme = "vscode"
 
-lvim.builtin.alpha.active = true
+lvim.builtin.alpha.active = false
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -88,7 +88,7 @@ vim.diagnostic.config({
 })
 
 -- always installed on startup, useful for parsers without a strict filetype
-lvim.builtin.treesitter.ensure_installed = { "comment", "markdown_inline", "regex" }
+lvim.builtin.treesitter.ensure_installed = {}
 
 -- ---configure a server manually. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
@@ -139,6 +139,7 @@ lvim.plugins = {
     "p00f/clangd_extensions.nvim",
     "mbbill/undotree",
     "lukoshkin/trailing-whitespace",
+    "Glench/Vim-Jinja2-Syntax",
 
     {
         "junegunn/vim-easy-align",
