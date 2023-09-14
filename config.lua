@@ -22,11 +22,7 @@ vim.opt.foldopen = "block,hor,mark,percent,quickfix,search,tag,undo"
 
 -- general
 lvim.log.level = "info"
-lvim.format_on_save = {
-    enabled = true,
-    pattern = "*.lua",
-    timeout = 1000,
-}
+lvim.format_on_save = false
 
 -- to disable icons and use a minimalist setup, uncomment the following
 lvim.use_icons = false
