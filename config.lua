@@ -7,11 +7,13 @@ vim.opt.softtabstop = tabstop
 vim.opt.expandtab = true
 vim.opt.relativenumber = false
 vim.opt.mouse = ""
-vim.opt.colorcolumn = "81"
+vim.opt.colorcolumn = "81,101"
 vim.opt.scrolloff = 5
 vim.opt.backspace = "indent"
 vim.opt.whichwrap = "b,s"
 vim.opt.timeoutlen = 300
+vim.opt.formatoptions = "jcrql1n"
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.foldmethod = "indent"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
@@ -44,6 +46,23 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
 lvim.keys.visual_mode["ga"] = "<Plug>(EasyAlign)"
 
+lvim.keys.normal_mode["m"] = "h"
+lvim.keys.normal_mode["n"] = "j"
+lvim.keys.normal_mode["e"] = "k"
+lvim.keys.normal_mode["i"] = "l"
+
+lvim.keys.visual_mode["m"] = "h"
+lvim.keys.visual_mode["n"] = "j"
+lvim.keys.visual_mode["e"] = "k"
+lvim.keys.visual_mode["i"] = "l"
+
+lvim.keys.normal_mode["s"] = "i"
+lvim.keys.visual_mode["s"] = "i"
+lvim.keys.normal_mode["k"] = "n"
+lvim.keys.visual_mode["k"] = "n"
+lvim.keys.normal_mode["j"] = "e"
+lvim.keys.visual_mode["j"] = "e"
+
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["s"] = { "<cmd>wa<cr>", "Save all" }
 -- lvim.builtin.which_key.mappings["W"] = { "<cmd>noautocmd w<cr>", "Save without formatting" }
@@ -60,7 +79,6 @@ lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.treesitter.auto_install = true
 lvim.builtin.treesitter.highlight.enable = true
-lvim.builtin.treesitter.rainbow.enable = false
 lvim.builtin.autopairs.active = false
 
 lvim.builtin.telescope.pickers = {
@@ -85,6 +103,7 @@ vim.diagnostic.config({
 
 -- always installed on startup, useful for parsers without a strict filetype
 lvim.builtin.treesitter.ensure_installed = {}
+lvim.builtin.treesitter.ignore_install = { "rst", "comment" } -- too slow
 
 -- ---configure a server manually. IMPORTANT: Requires `:LvimCacheReset` to take effect
 -- ---see the full default list `:lua =lvim.lsp.automatic_configuration.skipped_servers`
@@ -131,7 +150,7 @@ lvim.builtin.treesitter.ensure_installed = {}
 lvim.plugins = {
     "lunarvim/colorschemes",
     "Mofiqul/vscode.nvim",
-    "mrjones2014/nvim-ts-rainbow",
+    "HiPhish/rainbow-delimiters.nvim",
     "p00f/clangd_extensions.nvim",
     "mbbill/undotree",
     "lukoshkin/trailing-whitespace",
