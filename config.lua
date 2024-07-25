@@ -46,22 +46,24 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 
 lvim.keys.visual_mode["ga"] = "<Plug>(EasyAlign)"
 
-lvim.keys.normal_mode["m"] = "h"
-lvim.keys.normal_mode["n"] = "j"
+lvim.keys.normal_mode[","] = "h"
+lvim.keys.normal_mode["a"] = "j"
 lvim.keys.normal_mode["e"] = "k"
 lvim.keys.normal_mode["i"] = "l"
 
-lvim.keys.visual_mode["m"] = "h"
-lvim.keys.visual_mode["n"] = "j"
+lvim.keys.visual_mode[","] = "h"
+lvim.keys.visual_mode["a"] = "j"
 lvim.keys.visual_mode["e"] = "k"
 lvim.keys.visual_mode["i"] = "l"
 
 lvim.keys.normal_mode["s"] = "i"
 lvim.keys.visual_mode["s"] = "i"
-lvim.keys.normal_mode["k"] = "n"
-lvim.keys.visual_mode["k"] = "n"
-lvim.keys.normal_mode["j"] = "e"
-lvim.keys.visual_mode["j"] = "e"
+lvim.keys.normal_mode["S"] = "I"
+lvim.keys.visual_mode["S"] = "I"
+lvim.keys.normal_mode["h"] = "a"
+lvim.keys.visual_mode["h"] = "a"
+lvim.keys.normal_mode["H"] = "A"
+lvim.keys.visual_mode["H"] = "A"
 
 -- -- Use which-key to add extra bindings with the leader-key prefix
 -- lvim.builtin.which_key.mappings["s"] = { "<cmd>wa<cr>", "Save all" }
